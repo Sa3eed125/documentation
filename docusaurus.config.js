@@ -12,6 +12,7 @@ const config = {
 
   onBrokenLinks: 'warn',
   markdown: {
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
@@ -42,6 +43,9 @@ const config = {
   ],
 
   themeConfig: {
+    mermaid: {
+      theme: { light: 'neutral', dark: 'forest' },
+    },
     navbar: {
       title: 'ECM Docs',
       items: [
@@ -82,6 +86,8 @@ const config = {
       darkTheme: require('prism-react-renderer').themes.dracula,
     },
   },
+
+  themes: ['@docusaurus/theme-mermaid'],
 };
 
 module.exports = config;
